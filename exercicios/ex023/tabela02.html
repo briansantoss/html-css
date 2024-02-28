@@ -14,13 +14,20 @@
             border-collapse: collapse;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
-
-        td {
-            text-align: center;
+        
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
         }
 
         td:not(:first-child) {
@@ -28,7 +35,7 @@
         }
 
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
         }
     </style>
@@ -36,10 +43,11 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -124,37 +132,37 @@
                 <td>2.817.381</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Mato Grosso do Sul</td>
+                <td>2.757.013</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Sergipe</td>
+                <td>2.209.558</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Rondônia</td>
+                <td>1.581.196</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Tocantins</td>
+                <td>1.511.460</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Acre</td>
+                <td>830.018</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Amapá</td>
+                <td>733.759</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>Roraima</td>
+                <td>636.707</td>
             </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td><strong>210.147.125</strong></td>
             </tr>
         </tfoot>
